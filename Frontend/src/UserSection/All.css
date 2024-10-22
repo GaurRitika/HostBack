@@ -1,0 +1,183 @@
+/* General Styles */
+
+.container {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1e1e1e; /* Dark background */
+  height: 100%;
+  
+
+}
+
+/* Menu Icon */
+.menu-icon {
+  margin-top: 100px;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 15px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+  margin-top: 150px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: calc(100% - 80px); 
+  background: #0a0a0a; /* Dark black background */
+  color: white;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.sidebar ul li {
+  
+  margin: 20px 0;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease, background 0.3s ease;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sidebar ul li:hover {
+  background-color: #e49fff;
+  color: #000;
+}
+.sidebar ul a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from li */
+  display: block;
+  width: 100%; /* Make the link cover the whole li */
+}
+
+/* Posts Section */
+
+
+/* Posts Section */
+.posts {
+
+  width: 70vw;
+  margin: 0 auto;
+  padding-top: 100px; /* Adjust based on the height of your navbar */
+  /* display: grid; */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Larger Cards */
+  /* gap: 30px; Increase gap for cleaner layout */
+  transition: margin-left 0.3s ease;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.posting{
+  /* margin-top: 300px;
+  padding-top: 100px;
+  height: 500vh; */
+
+
+  margin-top: 60px; /* Ensure this matches the height of the fixed navbar */
+  padding: 10px;
+  max-height: calc(100vh - 60px); /* Adjust height to avoid overflow */
+  overflow-y: auto;
+}
+
+.posts.adjusted {
+  margin-left: 320px;
+}
+
+.card {
+  background: #333333; /* Dark grey card background */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px; /* Padding for a cleaner look */
+  width: 700px; /* Set fixed width */
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Subtle grow effect */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ff66b2; /* Soft pink for headings */
+}
+
+.card p {
+  color: #dddddd;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.interaction-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.card-desc {
+  flex-grow: 1;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  max-height: 4.5em;
+}
+
+.open-btn {
+  background: #c06eff; /* Purple button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.open-btn:hover {
+  background: #9933ff; /* Darker purple on hover */
+}
